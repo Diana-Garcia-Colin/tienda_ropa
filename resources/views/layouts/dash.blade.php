@@ -66,9 +66,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/proveedores">
+                <a class="nav-link" href="/home/categorias">
                     <i class="bx bx-grid-alt"></i>
-                    <span>Proveedores</span>
+                    <span>Categorias</span>
                 </a>
             </li>
 

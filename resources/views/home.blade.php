@@ -66,9 +66,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/clientes">
+                <a class="nav-link" href="/home/categorias">
                     <i class="bx bxs-user-account"></i>
-                    <span>Clientes</span>
+                    <span>Categorias</span>
                 </a>
             </li>
 

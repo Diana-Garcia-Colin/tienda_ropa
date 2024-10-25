@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MarcasController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
@@ -20,6 +21,7 @@ Route::resource('products', ProductController::class);
 
 // Rutas de recursos para marcas
 Route::resource('/home/marcas', MarcasController::class);
+Route::resource('/home/categorias', CategoriaController::class);
 
 // Rutas administrativas bajo el prefijo 'admin'
 Route::prefix('admin')->group(function () {
