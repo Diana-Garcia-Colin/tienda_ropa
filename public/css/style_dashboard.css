@@ -1,0 +1,261 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTS GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* VARIABLES */
+:root {
+    --blanco: #E0E0E0;
+    --azul-opacidad: #184463;
+    --bg-menu: #003053;
+    --bg-body: #C7E1FF;
+}
+
+/* GENERALES */
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--blanco);
+    background-color: var(--bg-body);
+    width: 100vw; /* Establece el ancho al 100% del viewport width */
+    height: 100vh; /* Establece la altura al 100% del viewport height */
+}
+
+
+.menu-dashboard {
+    width: 100px; /* Cambia este ancho según tus necesidades */
+    min-width: 150px; /* Ancho mínimo del menú */
+    max-width: 100%; /* El menú se ajustará automáticamente al tamaño de la pantalla */
+    height: 100%; /* Ocupa el 100% del viewport */
+    background: #007bff;
+    padding: 20px;
+    transition: width .3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-dashboard.open {
+    width: 300px; /* Ancho del menú cuando está abierto */
+}
+
+/* TOP MENU */
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-menu .logo {
+    display: flex;
+    align-items: center;
+}
+
+.top-menu .logo img {
+    width: 40px;
+    transition: width .3s ease;
+}
+
+.top-menu .logo span {
+    font-size: 20px;
+    margin-left: 20px;
+    display: none;
+}
+
+.top-menu .toggle {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.top-menu .toggle i {
+    font-size: 35px;
+}
+
+/* INPUT BOX */
+.input-search {
+    width: 100%;
+    margin: 20px 0; /* Reduzco el margen superior e inferior para que se ajuste mejor */
+    background-color: var(--azul-opacidad);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.input-search i {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.input-search .input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+    color: var(--blanco);
+    font-size: 22px;
+    display: none;
+}
+
+.menu-dashboard.open .input-search .input {
+    display: block;
+}
+
+/* ENLACES MENU */
+.menu .enlace {
+    padding: 20px 0 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Reduzco el margen inferior para que se ajuste mejor */
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.menu .enlace:hover {
+    background: var(--azul-opacidad);
+}
+
+.menu .enlace i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.menu .enlace span {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.menu-dashboard.open .menu .enlace {
+    padding: 20px; /* Aumento el espacio alrededor de los enlaces cuando el menú está abierto */
+}
+
+.menu-dashboard.open .menu .enlace span {
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+aside {
+    background-color: #007bff;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* CONTENT CONTAINER */
+.content-container {
+    flex: 1;
+    padding: 0px;
+    background-color: var(--bg-body);
+    color: var(--azul-opacidad);
+}
+
+.menu .home {
+    padding: 20px 0 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Reduzco el margen inferior para que se ajuste mejor */
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.menu .home:hover {
+    background: var(--azul-opacidad);
+}
+
+.menu .home i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.menu .home span {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.menu-dashboard.open .menu .home {
+    padding: 20px; /* Aumento el espacio alrededor de los enlaces cuando el menú está abierto */
+}
+
+.menu-dashboard.open .menu .home span {
+    opacity: 1;
+}
