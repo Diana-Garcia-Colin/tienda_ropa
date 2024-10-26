@@ -80,17 +80,17 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/puestos">
+                <a class="nav-link" href="/home/empresas">
                     <i class='bx bxs-pin'></i>
-                    <span>Puestos</span>
+                    <span>Empresas</span>
                 </a>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin/productos">
+                <a class="nav-link" href="/home/puestos">
                     <i class='bx bxs-cart'></i>
-                    <span>Productos</span>
+                    <span>Puestos</span>
                 </a>
             </li>   
 

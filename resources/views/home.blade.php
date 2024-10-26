@@ -80,14 +80,14 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/empleados">
+                <a class="nav-link" href="/home/empresas">
                     <i class="bx bx-user"></i>
-                    <span>Empleados</span>
+                    <span>Empresas</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/puestos">
+                <a class="nav-link" href="/home/puestos">
                     <i class='bx bxs-pin'></i>
                     <span>Puestos</span>
                 </a>

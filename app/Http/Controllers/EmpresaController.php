@@ -12,7 +12,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        $empresas = Empresa::paginate(10); // Cambia 10 por el número de elementos que desees mostrar por página
+        return view('admin.empresas.index', compact('empresas'));
     }
 
     /**
@@ -20,7 +21,7 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.empresas.create');
     }
 
     /**
@@ -28,7 +29,17 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nom_e' => 'required|string|max:255',
+        ]);
+
+        // Crear un nuevo producto
+        Empresa::create([
+            'nom_e' => $request->nom_e,
+        ]);
+
+        // Redirigir a la lista de productos con un mensaje de éxito
+        return redirect()->route('empresas.index')->with('success', 'Empresa created successfully.');
     }
 
     /**
@@ -36,7 +47,7 @@ class EmpresaController extends Controller
      */
     public function show(Empresa $empresa)
     {
-        //
+        return view('admin.empresas.show', compact('empresa'));
     }
 
     /**
@@ -44,7 +55,7 @@ class EmpresaController extends Controller
      */
     public function edit(Empresa $empresa)
     {
-        //
+        return view('admin.empresas.edit', compact('empresa'));
     }
 
     /**
@@ -52,7 +63,15 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, Empresa $empresa)
     {
-        //
+        request->validate([
+            'nom_e' => 'required|string|max:255',
+        ]);
+
+        // Actualizar el producto
+        $empresa->update($request->only('nom_e'));
+
+        // Redirigir con mensaje de éxito
+        return redirect()->route('empresas.index')->with('success', 'Empresa updated successfully.');
     }
 
     /**
@@ -60,6 +79,9 @@ class EmpresaController extends Controller
      */
     public function destroy(Empresa $empresa)
     {
-        //
+        $empresa->delete();
+
+        // Redirigir a la lista de productos con un mensaje de éxito
+        return redirect()->route('empresas.index')->with('success', 'Empresa deleted successfully.');
     }
 }
