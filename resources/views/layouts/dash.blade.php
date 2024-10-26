@@ -73,9 +73,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/empleados">
+                <a class="nav-link" href="/home/tipo_ropas">
                     <i class="bx bx-user"></i>
-                    <span>Empleados</span>
+                    <span>Tipo ropa</span>
                 </a>
             </li>
 

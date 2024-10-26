@@ -73,9 +73,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/proveedores">
+                <a class="nav-link" href="/home/tipo_ropas">
                     <i class="bx bx-grid-alt"></i>
-                    <span>Proveedores</span>
+                    <span>Tipo ropas</span>
                 </a>
             </li>
 

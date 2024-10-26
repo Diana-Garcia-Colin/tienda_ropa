@@ -10,7 +10,7 @@
 
         <div class="pull-left">
 
-            <h2>Añadir tipo ropa</h2>
+            <h2>Añadir tipo de ropa</h2>
 
         </div>
 
@@ -67,6 +67,8 @@
             </div>
 
         </div>
+
+        
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
