@@ -10,13 +10,13 @@
 
             <div class="pull-left">
 
-                <h2>Editar puesto</h2>
+                <h2>Editar talla</h2>
 
             </div>
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('puestos.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('tallas.index') }}"> Back</a>
 
 
             </div>
@@ -49,7 +49,7 @@
 
 
 
-    <form action="{{ route('puestos.update',$puesto->id) }}" method="POST">
+    <form action="{{ route('tallas.update',$talla->id) }}" method="POST">
 
         @csrf
 
@@ -62,9 +62,9 @@
 
                 <div class="form-group">
 
-                    <strong>Puesto:</strong>
+                    <strong>Talla:</strong>
 
-                    <input type="text" name="puesto" value="{{ $puesto->name }}" class="form-control" placeholder="Puesto">
+                    <input type="text" name="talla" value="{{ $talla->name }}" class="form-control" placeholder="Talla">
 
                 </div>
 

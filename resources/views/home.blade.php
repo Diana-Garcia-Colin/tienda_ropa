@@ -60,10 +60,12 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="/home/marcas">
-                    <i class="bx bxs-user"></i>
+                    <i class="fa fa-tshirt"></i>
                     <span>Marcas</span>
                 </a>
             </li>
+
+
 
             <li class="nav-item">
                 <a class="nav-link" href="/home/categorias">
@@ -90,6 +92,13 @@
                 <a class="nav-link" href="/home/puestos">
                     <i class='bx bxs-pin'></i>
                     <span>Puestos</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/home/tallas">
+                    <i class='bx bx-ruler'></i>
+                    <span>Tallas</span>
                 </a>
             </li>
 
