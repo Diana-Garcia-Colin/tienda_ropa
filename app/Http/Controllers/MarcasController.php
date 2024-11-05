@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\View\View;
-use App\Models\Marcas;
+use App\Models\Marca;
 use Illuminate\Http\Request;
 
 class MarcasController extends Controller
@@ -13,7 +13,7 @@ class MarcasController extends Controller
      */
     public function index()
     {
-        $marcas = Marcas::latest()->paginate(5);
+        $marcas = Marca::latest()->paginate(5);
         return view('admin.marcas.index', compact('marcas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -35,7 +35,7 @@ class MarcasController extends Controller
             'marca' => 'required|string|max:255',
         ]);
 
-        Marcas::create($request->all());
+        Marca::create($request->all());
         return redirect()->route('marcas.index')
             ->with('success', 'Marca creada con éxito.');
     }
@@ -43,7 +43,7 @@ class MarcasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Marcas $marca): View
+    public function show(Marca $marca): View
     {
         return view('admin.marcas.show', compact('marca'));
     }
@@ -53,7 +53,7 @@ class MarcasController extends Controller
      */
     public function edit($id): View
     {
-        $marca = Marcas::findOrFail($id); // Cambié a findOrFail para mayor seguridad
+        $marca = Marca::findOrFail($id); // Cambié a findOrFail para mayor seguridad
         return view('admin.marcas.edit', compact('marca'));
     }
 
@@ -66,7 +66,7 @@ class MarcasController extends Controller
             'marca' => 'required|string|max:255',
         ]);
 
-        $marca = Marcas::findOrFail($id);
+        $marca = Marca::findOrFail($id);
         $marca->update($request->all());
 
         return redirect()->route('marcas.index')
@@ -76,7 +76,7 @@ class MarcasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Marcas $marca): \Illuminate\Http\RedirectResponse
+    public function destroy(Marca $marca): \Illuminate\Http\RedirectResponse
     {
         $marca->delete();
 

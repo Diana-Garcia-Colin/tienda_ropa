@@ -103,6 +103,14 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="/home/productos">
+                    <i class='bx bx-box'></i>
+                    <span>Productos</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
 
                 <a class="nav-link" href="/admin/ventas">
                     <i class="bx bx-shopping-bag"></i>

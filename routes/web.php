@@ -8,6 +8,7 @@ use App\Http\Controllers\Tipo_ropaController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\PuestoController;
 use App\Http\Controllers\TallaController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::resource('/home/tipo_ropas', Tipo_ropaController::class);
 Route::resource('/home/empresas', EmpresaController::class);
 Route::resource('/home/puestos', PuestoController::class);
 Route::resource('/home/tallas', TallaController::class);
+Route::resource('/home/productos', ProductoController::class);
 // Rutas administrativas bajo el prefijo 'admin'
 Route::prefix('admin')->group(function () {
     Route::resource('products', ProductController::class);
